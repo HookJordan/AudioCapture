@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.IO;
 
-namespace CORE.RemoteAudio
+namespace CaptureLib
 {
     public class AudioCapture
     {
