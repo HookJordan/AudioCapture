@@ -69,7 +69,10 @@ namespace CaptureLib
                     mciSendString("save recsound " + output, "", 0, 0);
                     BitCaptured(File.ReadAllBytes(output));
                 }
-                catch { }
+                catch (Exception ex)
+                { 
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
         /// <summary>
@@ -86,13 +89,19 @@ namespace CaptureLib
                     CaptureThread.Abort();
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message)
+            }
             try
             {
                 if (File.Exists(output))
                     File.Delete(output);
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message)
+            }
         }
         /// <summary>
         /// New Bit Captured from audio 
