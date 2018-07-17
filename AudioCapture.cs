@@ -106,7 +106,7 @@ namespace CaptureLib
         /// <summary>
         /// New Bit Captured from audio 
         /// </summary>
-        /// <param name="Caputre">The audio (.wav) encoded as a base 64 string </param>
+        /// <param name="Capture">The audio (.wav) encoded as a base 64 string </param>
         public delegate void BitCapturedHandle(byte[] Capture);
         public event BitCapturedHandle BitCaptured;
         #region NativeAPI
